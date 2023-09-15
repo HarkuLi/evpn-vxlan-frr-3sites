@@ -1,0 +1,9 @@
+#!/bin/sh
+sudo docker exec -d clab-frr01-router1 ip link add vtep100 type vxlan id 100 dstport 4789 local 10.10.10.1 nolearning
+sudo docker exec -d clab-frr01-router1 ip link set up dev vtep100
+
+sudo docker exec -d clab-frr01-router2 ip link add vtep100 type vxlan id 100 dstport 4789 local 10.10.10.2 nolearning
+sudo docker exec -d clab-frr01-router2 ip link set up dev vtep100
+
+sudo docker exec -d clab-frr01-router3 ip link add vtep100 type vxlan id 100 dstport 4789 local 10.10.10.3 nolearning
+sudo docker exec -d clab-frr01-router3 ip link set up dev vtep100

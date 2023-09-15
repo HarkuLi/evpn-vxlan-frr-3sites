@@ -1,0 +1,353 @@
+{
+  "name": "frr01",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-c03fabaddb98",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "PC1": {
+      "index": "0",
+      "shortname": "PC1",
+      "longname": "clab-frr01-PC1",
+      "fqdn": "PC1.frr01.io",
+      "group": "",
+      "labdir": "/home/harku/Code/evpn_vxlan/clab-frr01/PC1",
+      "kind": "linux",
+      "image": "praqma/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c03fabaddb98",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/harku/Code/evpn_vxlan/clab-frr01/PC1",
+        "clab-node-name": "PC1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/harku/Code/evpn_vxlan/frr01.clab.yml",
+        "containerlab": "frr01"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PC2": {
+      "index": "1",
+      "shortname": "PC2",
+      "longname": "clab-frr01-PC2",
+      "fqdn": "PC2.frr01.io",
+      "group": "",
+      "labdir": "/home/harku/Code/evpn_vxlan/clab-frr01/PC2",
+      "kind": "linux",
+      "image": "praqma/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c03fabaddb98",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/harku/Code/evpn_vxlan/clab-frr01/PC2",
+        "clab-node-name": "PC2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/harku/Code/evpn_vxlan/frr01.clab.yml",
+        "containerlab": "frr01"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PC3": {
+      "index": "2",
+      "shortname": "PC3",
+      "longname": "clab-frr01-PC3",
+      "fqdn": "PC3.frr01.io",
+      "group": "",
+      "labdir": "/home/harku/Code/evpn_vxlan/clab-frr01/PC3",
+      "kind": "linux",
+      "image": "praqma/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c03fabaddb98",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/harku/Code/evpn_vxlan/clab-frr01/PC3",
+        "clab-node-name": "PC3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/harku/Code/evpn_vxlan/frr01.clab.yml",
+        "containerlab": "frr01"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "router1": {
+      "index": "3",
+      "shortname": "router1",
+      "longname": "clab-frr01-router1",
+      "fqdn": "router1.frr01.io",
+      "group": "",
+      "labdir": "/home/harku/Code/evpn_vxlan/clab-frr01/router1",
+      "kind": "linux",
+      "image": "frrouting/frr:v7.5.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c03fabaddb98",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/harku/Code/evpn_vxlan/clab-frr01/router1",
+        "clab-node-name": "router1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/harku/Code/evpn_vxlan/frr01.clab.yml",
+        "containerlab": "frr01"
+      },
+      "port-bindings": [
+      ]
+    },
+    "router2": {
+      "index": "4",
+      "shortname": "router2",
+      "longname": "clab-frr01-router2",
+      "fqdn": "router2.frr01.io",
+      "group": "",
+      "labdir": "/home/harku/Code/evpn_vxlan/clab-frr01/router2",
+      "kind": "linux",
+      "image": "frrouting/frr:v7.5.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c03fabaddb98",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/harku/Code/evpn_vxlan/clab-frr01/router2",
+        "clab-node-name": "router2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/harku/Code/evpn_vxlan/frr01.clab.yml",
+        "containerlab": "frr01"
+      },
+      "port-bindings": [
+      ]
+    },
+    "router3": {
+      "index": "5",
+      "shortname": "router3",
+      "longname": "clab-frr01-router3",
+      "fqdn": "router3.frr01.io",
+      "group": "",
+      "labdir": "/home/harku/Code/evpn_vxlan/clab-frr01/router3",
+      "kind": "linux",
+      "image": "frrouting/frr:v7.5.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c03fabaddb98",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/harku/Code/evpn_vxlan/clab-frr01/router3",
+        "clab-node-name": "router3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/harku/Code/evpn_vxlan/frr01.clab.yml",
+        "containerlab": "frr01"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "router1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:80:f1:cb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:aa:0b:03",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:69:68:b6",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:bb:87:c5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:99:7f:cb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:0d:eb:80",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "PC1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:49:c3:59",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:e2:bf:66",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "PC2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ca:4b:da",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:cd:b2:81",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "PC3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:fe:fe:3d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router3",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:11:6d:1f",
+        "peer": "a"
+      }
+    }
+  ]
+}
