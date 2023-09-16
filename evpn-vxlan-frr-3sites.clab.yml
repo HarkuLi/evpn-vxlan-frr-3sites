@@ -1,4 +1,4 @@
-name: frr01
+name: evpn-vxlan-frr-3sites
 
 topology:
   nodes:
