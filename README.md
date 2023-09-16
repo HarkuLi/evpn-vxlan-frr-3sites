@@ -1,10 +1,45 @@
-# Simple OSPF lab using FRR
+# 3-site EVPN VXLAN with FRR
 
-This lab example consists of three FRR routers connected in a ring topology. Each router has one PC connected to it.
+Deploy a 3-site EVPN VXLAN network with FRR by Containerlab.
 
-This is also an example of how to pre-configure lab nodes on "linux" node types in Containerlab.
+## Topology
 
-To start this lab, run the *run.sh* script, which will run the containerlab deploy commands, and then configure the PC interfaces.
+![](./assets/topology.png)
 
-The lab configuration is documented in detail at: https://www.brianlinkletter.com/2021/05/use-containerlab-to-emulate-open-source-routers/
+## Get Started
 
+Deploy the network:
+
+```bash
+make deploy
+```
+
+Destroy the network:
+
+```bash
+make destroy
+```
+
+## Test
+
+1.  Enter the bash shell of PC1:
+
+    ```bash
+    make PC1.bash
+    ```
+
+2.  Ping PC2 and PC3:
+
+    ```bash
+    ping 10.10.10.2
+    ping 10.10.10.3
+    ```
+
+## Handy Commands
+
+See [Makefile](./Makefile).
+
+## References
+
+*   [martimy/clab_vxlan_frr](https://github.com/martimy/clab_vxlan_frr)
+*   [VXLAN: BGP EVPN with FRR - Vincent Bernat](https://vincent.bernat.ch/en/blog/2017-vxlan-bgp-evpn#introduction-to-bgp-evpn)
