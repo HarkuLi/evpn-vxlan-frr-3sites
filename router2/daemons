@@ -1,12 +1,12 @@
 zebra=yes
 bgpd=yes
-ospfd=no
+ospfd=yes
 ospf6d=no
 ripd=no
 ripngd=no
 isisd=no
 pimd=no
-ldpd=no
+ldpd=yes
 nhrpd=no
 eigrpd=no
 babeld=no

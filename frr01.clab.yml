@@ -20,20 +20,31 @@ topology:
       binds:
         - router3/daemons:/etc/frr/daemons
         - router3/frr.conf:/etc/frr/frr.conf
+    route-reflector:
+      kind: linux
+      image: frrouting/frr:v7.5.1
+      binds:
+        - route-reflector/daemons:/etc/frr/daemons
+        - route-reflector/frr.conf:/etc/frr/frr.conf
     PC1:
       kind: linux
-      image: praqma/network-multitool:latest
+      image: wbitt/network-multitool:latest
+      exec:
+        - ip addr add 10.10.10.1/24 dev eth1
     PC2:
       kind: linux
-      image: praqma/network-multitool:latest
+      image: wbitt/network-multitool:latest
+      exec:
+        - ip addr add 10.10.10.2/24 dev eth1
     PC3:
       kind: linux
-      image: praqma/network-multitool:latest
-
+      image: wbitt/network-multitool:latest
+      exec:
+        - ip addr add 10.10.10.3/24 dev eth1
   links:
-    - endpoints: ["router1:eth1", "router2:eth1"]
-    - endpoints: ["router1:eth2", "router3:eth1"]
-    - endpoints: ["router2:eth2", "router3:eth2"]
-    - endpoints: ["PC1:eth1", "router1:eth3"]
-    - endpoints: ["PC2:eth1", "router2:eth3"]
-    - endpoints: ["PC3:eth1", "router3:eth3"]
+    - endpoints: ["router1:eth1", "route-reflector:eth1"]
+    - endpoints: ["router2:eth1", "route-reflector:eth2"]
+    - endpoints: ["router3:eth1", "route-reflector:eth3"]
+    - endpoints: ["PC1:eth1", "router1:eth2"]
+    - endpoints: ["PC2:eth1", "router2:eth2"]
+    - endpoints: ["PC3:eth1", "router3:eth2"]

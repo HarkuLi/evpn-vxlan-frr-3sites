@@ -1,0 +1,25 @@
+#!/bin/sh
+
+docker exec -it clab-frr01-router1 ip link add vxlan100 type vxlan id 100 dstport 4789 nolearning
+docker exec -it clab-frr01-router1 brctl addbr br100
+docker exec -it clab-frr01-router1 brctl addif br100 vxlan100
+docker exec -it clab-frr01-router1 brctl stp br100 off
+docker exec -it clab-frr01-router1 ip link set up dev br100
+docker exec -it clab-frr01-router1 ip link set up dev vxlan100
+docker exec -it clab-frr01-router1 brctl addif br100 eth2
+
+docker exec -it clab-frr01-router2 ip link add vxlan100 type vxlan id 100 dstport 4789 nolearning
+docker exec -it clab-frr01-router2 brctl addbr br100
+docker exec -it clab-frr01-router2 brctl addif br100 vxlan100
+docker exec -it clab-frr01-router2 brctl stp br100 off
+docker exec -it clab-frr01-router2 ip link set up dev br100
+docker exec -it clab-frr01-router2 ip link set up dev vxlan100
+docker exec -it clab-frr01-router2 brctl addif br100 eth2
+
+docker exec -it clab-frr01-router3 ip link add vxlan100 type vxlan id 100 dstport 4789 nolearning
+docker exec -it clab-frr01-router3 brctl addbr br100
+docker exec -it clab-frr01-router3 brctl addif br100 vxlan100
+docker exec -it clab-frr01-router3 brctl stp br100 off
+docker exec -it clab-frr01-router3 ip link set up dev br100
+docker exec -it clab-frr01-router3 ip link set up dev vxlan100
+docker exec -it clab-frr01-router3 brctl addif br100 eth2
